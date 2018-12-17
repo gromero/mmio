@@ -15,6 +15,7 @@ int main(void) {
   s = lseek(fd, textsize, SEEK_SET);
   write(fd, "", 1);
   char *map = mmap(0, textsize, PROT_WRITE, MAP_SHARED, fd, 0);
+  while(1);
   memcpy(map, text, strlen(text)+1);
   msync(map, textsize, MS_SYNC);
   munmap(map, textsize);
