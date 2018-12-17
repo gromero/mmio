@@ -12,7 +12,7 @@
 /****
 -> fd = open("./fakeout")
 
-$ echo "abcdefghjklmn" > fakeout 
+$ echo "abcdefghjklmn" > fakeout
 $ ./x
 $ # OK
 $ >fakeout
@@ -31,7 +31,7 @@ $ # FAILED
 $ ./x 1>>./fakeout
 Bus error (core dumped)
 $ # FAILED
-$ echo "abcdefghjklmn" > fakeout 
+$ echo "abcdefghjklmn" > fakeout
 $ ./x 1>>./fakeout
 $ # OK
 
